@@ -317,11 +317,12 @@ h4{
     }
     .f-prods{
         padding: 0 5px;
+        justify-content: space-evenly;
         /* background-color: teal; */
     }
     .f-prods .items{
         width: 45%;
-        height: 60vh;
+        height: 30vh;
     }
     .accessories h1{
         font-size: 2rem;
