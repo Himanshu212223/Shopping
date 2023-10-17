@@ -18,12 +18,17 @@
 <body>
     <nav id="nav-bar">
         <div class="logo"></div>
-        <ul class="flex-box nav">
+        <div class="small-windox">
+            <a href="#" class="link bag tools"><i class="fa-solid fa-bag-shopping"></i></a>
+            <i id="hamburger" class="fa-solid fa-bars tools"></i>
+        </div>
+        <ul class="flex-box nav hidden" id="navigation">
+            <li><i class="fa-solid fa-xmark tools" id="xmark"></i></li>
             <li><a href="#" class="link pages active">Home</a></li>
             <li><a href="#featured" class="link pages">Shop</a></li>
             <li><a href="#" class="link pages">About</a></li>
             <li><a href="#" class="link pages">Contact</a></li>
-            <li><a href="#" class="link bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
+            <li class="hidden"><a href="#" class="link bag"><i class="fa-solid fa-bag-shopping"></i></a></li>
         </ul>
     </nav>
 
@@ -314,5 +319,6 @@
     </footer>
 
 </body>
+<script src="resources/index.js"></script>
 
 </html>
