@@ -1,0 +1,349 @@
+*{
+    margin: 0 0;
+    padding: 0 0;
+    font-family: 'Quicksand', sans-serif;
+}
+
+/* Scroll Bar */
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: pink;
+}
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: deeppink;
+}
+
+/* Navigation bar */
+
+h1{
+    font-size: 4rem;
+}
+p{
+    color: grey;
+}
+h4{
+    color: deeppink;
+}
+.flex-box{
+    display: flex ;
+    justify-content: center;
+    align-items: center;
+}
+.link{
+    text-decoration: none;
+    color: grey;
+}
+#nav-bar{
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: sticky;
+    top: 0px;
+    background-color: white;
+    box-shadow: 0px 1px 10px 0px rgb(184, 183, 183);
+    z-index: 2 ;
+}
+#nav-bar .logo{
+    background-image: url('./images/PS.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 30px;
+    width: 200px;
+}
+.small-windox{
+    display: none;
+}
+#nav-bar ul li{
+    list-style: none;
+    margin: 0 20px;
+    font-size: large;
+    font-weight: 500;
+}
+#nav-bar ul li .pages{
+    transition: all 0.3s ease;
+    position: relative;
+}
+#nav-bar ul li a:hover{
+    color: deeppink;
+}
+#nav-bar ul li .pages::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 0px;
+    height: 2px;
+    background-color: pink;
+    transition: all 0.3s ease;
+}
+#nav-bar ul li .pages:hover::after{
+    width: 75%;
+}
+#nav-bar ul li .active{
+    color: deeppink;
+}
+#nav-bar ul li .active::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 75%;
+    height: 2px;
+    background-color: pink;
+    transition: all 0.3s ease;
+}
+#nav-bar ul li .bag{
+    padding: 15px 15px;
+}
+#pink{
+    color: deeppink;
+}
+.black{
+    color: black;
+    font-weight: 700;
+}
+.section{
+    height: 100vh;
+    padding: 0 50px;
+    justify-content: flex-start;
+    /* align-items: flex-start; */
+    /* background-color: teal; */
+
+}
+.section img{
+    height: 500px;
+}
+.section .details{
+    padding: 0 50px;
+}
+.section #price{
+    color: deeppink;
+}
+.section .buttons{
+    margin: 15px 0;
+}
+.section .buttons select{
+    width: 100px;
+    outline: none;
+    padding: 10px 0;
+    padding-left: 5px;
+    border: 1px solid teal;
+}
+.section .buttons input{
+    outline: none;
+    width: 50px;
+    padding: 10px 0;
+    padding-left: 5px;
+    border: 1px solid teal;
+}
+.section .buttons .add-to-cart{
+    padding: 9px 20px;
+    color: deeppink;
+    border: 1px solid deeppink;
+    transition: all 0.3s ease;
+}
+.section .buttons .add-to-cart:hover{
+    color: white;
+    background-color: deeppink;
+}
+.product-details{
+    margin-top: 50px;
+}
+
+/* Footer */
+.footer{
+    /* height: 50vh; */
+    padding: 50px;
+    margin-top: 20px;
+    border-top: 1px solid grey;
+    justify-content: space-between;
+    align-items: flex-start;
+
+    /* background-color: pink; */
+}
+.footer .logo-button{
+    height: 200px;
+    width: 200px;
+    background-image: url('./images/Perfect\ Style.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.footer .fav-icons{
+    font-size: x-large;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    margin-right: 15px;
+}
+.footer .fav-icons:hover{
+    color: deeppink;
+}
+
+
+@media screen and (min-width: 768px) and (max-width: 1024px){
+    .small-windox{
+        display: none;
+    }
+    .footer{
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        /* background-color: tomato; */
+    }
+    .footer .cols{
+        margin: 5px 10px;
+        /* background-color: teal; */
+        width: 40%;
+    }
+    .section{
+        height: auto;
+    }
+    .section .buttons{
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        flex-direction: column;
+        flex-flow: column;
+    }
+    .section .buttons input,
+    .section .buttons select,
+    .section .buttons .add-to-cart{
+        margin: 5px 0;
+    }
+}
+
+
+
+
+@media screen and (min-width: 426px) and (max-width: 768px){
+    .small-windox{
+        display: none;
+    }
+    .section{
+        height: auto;
+        flex-direction: column;
+    }
+    .section img{
+        height: 300px;
+    }
+    .section #name{
+        font-size: 2rem;
+    }
+    .section .buttons input,
+    .section .buttons select,
+    .section .buttons .add-to-cart{
+        margin: 5px 0;
+    }
+    .footer{
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        /* background-color: tomato; */
+    }
+    .footer .cols{
+        margin: 5px 10px;
+        /* background-color: teal; */
+        width: 40%;
+    }
+}
+
+@media screen and (min-width: 300px) and (max-width: 425px){
+    .small-windox{
+        display: none;
+    }
+    .section{
+        height: auto;
+        padding: 10px 10px;
+        flex-direction: column;
+    }
+    .section img{
+        width: 100%;
+        height: 400px;
+    }
+    .section #name{
+        font-size: 2rem;
+    }
+    .section .buttons{
+        display: flex;
+        flex-direction: column ;
+    }
+    .section .buttons input,
+    .section .buttons select,
+    .section .buttons .add-to-cart{
+        width: 100%;
+        margin: 5px 0;
+        width: 50%;
+        /* background-color: teal; */
+    }
+    .footer{
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        /* background-color: tomato; */
+    }
+    .footer .cols{
+        margin: 5px 10px;
+        /* background-color: teal; */
+        width: 40%;
+    }
+}
+
+
+
+
+@media screen and (max-width: 600px){
+    .nav-bar{
+        position: relative;
+    }
+    .nav-bar .logo{
+        width: 50px;
+    }
+    .nav{
+        /* display: none; */
+        position: absolute;
+        content: "";
+        right: 0;
+        top: 0;
+        flex-flow: column;
+        height: 100vh;
+        width: 50vw;
+        padding-top: 50px;
+        /* align-items: flex-start; */
+        justify-content: flex-start;
+        background-color: white ;
+    }
+    #nav-bar ul li{
+        width: 80%;
+        background-color: white;
+        margin: 10px 0px ;
+    }
+    .small-windox{
+        display: initial;
+    }
+    .hidden{
+        display : none;
+    }
+    .tools{
+        margin-right: 30px;
+        cursor: pointer;
+        font-size: x-large;
+    }
+    .footer{
+        flex-wrap: wrap;
+        padding: 20px 5px;
+        /* background-color: tomato; */
+    }
+    .footer .cols{
+        margin: 5px 10px;
+        /* background-color: teal; */
+        width: 40%;
+    }
+}
