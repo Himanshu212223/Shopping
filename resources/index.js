@@ -29,6 +29,6 @@ items.forEach(function(item){
 
         localStorage.psSelectedItem = "" ;
         localStorage.psSelectedItem = JSON.stringify(selectedItem);
-        window.location = "../items.html";
+        window.location = "https://himanshu212223.github.io/shopping-item/";
     })
 })
