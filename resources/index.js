@@ -21,6 +21,7 @@ if (xmark) {
 
 if(localStorage.psCartItem != undefined){
     document.getElementById("cart").classList.add('colorful');
+    document.getElementById("carts").classList.add('colorful');
 }
 
 //  Navigate to individual Item and add item to cart
@@ -36,12 +37,12 @@ items.forEach(function(item){
             name: item.children[2].innerText,
             price: item.children[4].innerText
         }
-
+        
         localStorage.psSelectedItem = "" ;
         localStorage.psSelectedItem = JSON.stringify(selectedItem);
         window.location = "https://himanshu212223.github.io/shopping-item/";
     })
-
+    
     //  Add to cart Screen
     item.children[5].addEventListener('click', function(){
         const selectedItem = {
@@ -55,10 +56,12 @@ items.forEach(function(item){
         if(localStorage.psCartItem === undefined){
             localStorage.psCartItem = JSON.stringify(psCart) ;
             document.getElementById("cart").classList.add('colorful');
+            document.getElementById("carts").classList.add('colorful');
             // console.log("null")
         }
         else{
-
+            
+            document.getElementById("carts").classList.add('colorful');
             document.getElementById("cart").classList.add('colorful');
             psCart = JSON.parse(localStorage.psCartItem) ;
             psCart.push(selectedItem) ;
