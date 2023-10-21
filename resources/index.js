@@ -54,6 +54,7 @@ items.forEach(function(item){
             size: 'small'
         }
         if(localStorage.psCartItem === undefined){
+            psCart.push(selectedItem) ;
             localStorage.psCartItem = JSON.stringify(psCart) ;
             document.getElementById("cart").classList.add('colorful');
             document.getElementById("carts").classList.add('colorful');
@@ -68,6 +69,7 @@ items.forEach(function(item){
             localStorage.psCartItem = JSON.stringify(psCart) ;
             // location.reload();
         }
-        // console.log(JSON.parse(localStorage.psCartItem));
+        // console.log(localStorage.psCartItem);
     });
-})
+});
+// console.log(localStorage.psCartItem);
