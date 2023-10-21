@@ -73,3 +73,4 @@ items.forEach(function(item){
     });
 });
 // console.log(localStorage.psCartItem);
+location.reload();
