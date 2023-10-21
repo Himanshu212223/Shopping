@@ -23,6 +23,10 @@ if(localStorage.psCartItem != undefined){
     document.getElementById("cart").classList.add('colorful');
     document.getElementById("carts").classList.add('colorful');
 }
+if(localStorage.psCartItem == undefined){
+    document.getElementById("cart").classList.remove('colorful');
+    document.getElementById("carts").classList.remove('colorful');
+}
 
 //  Navigate to individual Item and add item to cart
 const items = document.querySelectorAll('.items') ;
